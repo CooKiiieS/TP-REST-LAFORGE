@@ -1,0 +1,31 @@
+Quand on envoi une commande à la prise, elle nous répond dans un certain format. Elle met tout sur une seule ligne
+J'installe donc jq (sudo apt install jq) pour indenter automatiquement
+Avec la commande jq je récupère les informations renvoyées par ma prise  et je peux les filtrer en ajoutant .[champs_voulu]
+
+test@202-15:~/TP-REST-LAFORGE$ curl http://10.202.255.252/meter/0 | jq
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   119  100   119    0     0   5666      0 --:--:-- --:--:-- --:--:--  5666
+{
+  "power": 49.02,
+  "overpower": 0,
+  "is_valid": true,
+  "timestamp": 1606215557,
+  "counters": [
+    30.002,
+    10.594,
+    35.931
+  ],
+  "total": 150
+}
+
+Ici la commande jq permet d'indenter la réponse
+
+
+test@202-15:~/TP-REST-LAFORGE$ curl http://10.202.255.252/meter/0 | jq .power
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   119  100   119    0     0   7437      0 --:--:-- --:--:-- --:--:--  7437
+48.78
+
+Maintenant en ajoutant .power je ne récupère que l'information de la consommation actuelle en électricité
