@@ -1,0 +1,61 @@
+Les trames suivantes reprennent mes deux scripts crées précédemment
+1) allumer la prise, afficher la consommation, vérifier l'état de la prise
+2) éteindre la prise, afficher la consommation, vérifier l'état de la prise
+
+A chaque fois on a deux requêtes (1 du client pour la requête et 1 du plug pour répondre)
+
+On a 147 octets d'envoyés pour allumer un plug (voir trame 148)
+
+No.     Time           Source                Destination           Protocol Length Info
+    148 23.240490529   10.202.15.1           10.202.255.252        HTTP     147    GET /relay/0?turn=on HTTP/1.1 
+
+No.     Time           Source                Destination           Protocol Length Info
+    150 23.260611141   10.202.255.252        10.202.15.1           HTTP     290    HTTP/1.1 200 OK  (application/json)
+
+No.     Time           Source                Destination           Protocol Length Info
+    161 23.776944661   10.202.15.1           10.202.255.252        HTTP     372    GET /status HTTP/1.1 
+
+No.     Time           Source                Destination           Protocol Length Info
+    164 23.849864264   10.202.255.252        10.202.15.1           HTTP     502    HTTP/1.1 200 OK  (application/json)
+
+No.     Time           Source                Destination           Protocol Length Info
+    219 28.307515215   10.202.15.1           10.202.255.252        HTTP     139    GET /meter/0 HTTP/1.1 
+
+No.     Time           Source                Destination           Protocol Length Info
+    220 28.323815280   10.202.255.252        10.202.15.1           HTTP     287    HTTP/1.1 200 OK  (application/json)
+
+No.     Time           Source                Destination           Protocol Length Info
+    229 28.343322590   10.202.15.1           10.202.255.252        HTTP     139    GET /relay/0 HTTP/1.1 
+
+No.     Time           Source                Destination           Protocol Length Info
+    230 28.360642371   10.202.255.252        10.202.15.1           HTTP     290    HTTP/1.1 200 OK  (application/json)
+
+No.     Time           Source                Destination           Protocol Length Info
+    239 28.772526982   10.202.15.1           10.202.255.252        HTTP     372    GET /status HTTP/1.1 
+
+No.     Time           Source                Destination           Protocol Length Info
+    242 28.837785597   10.202.255.252        10.202.15.1           HTTP     503    HTTP/1.1 200 OK  (application/json)
+
+No.     Time           Source                Destination           Protocol Length Info
+    260 32.728463630   10.202.15.1           10.202.255.252        HTTP     148    GET /relay/0?turn=off HTTP/1.1 
+
+No.     Time           Source                Destination           Protocol Length Info
+    261 32.747408097   10.202.255.252        10.202.15.1           HTTP     291    HTTP/1.1 200 OK  (application/json)
+
+No.     Time           Source                Destination           Protocol Length Info
+    274 33.776246359   10.202.15.1           10.202.255.252        HTTP     372    GET /status HTTP/1.1 
+
+No.     Time           Source                Destination           Protocol Length Info
+    277 33.839348327   10.202.255.252        10.202.15.1           HTTP     503    HTTP/1.1 200 OK  (application/json)
+
+No.     Time           Source                Destination           Protocol Length Info
+    294 37.767391634   10.202.15.1           10.202.255.252        HTTP     139    GET /meter/0 HTTP/1.1 
+
+No.     Time           Source                Destination           Protocol Length Info
+    295 37.784283258   10.202.255.252        10.202.15.1           HTTP     286    HTTP/1.1 200 OK  (application/json)
+
+No.     Time           Source                Destination           Protocol Length Info
+    304 37.801180638   10.202.15.1           10.202.255.252        HTTP     139    GET /relay/0 HTTP/1.1 
+
+No.     Time           Source                Destination           Protocol Length Info
+    305 37.818862105   10.202.255.252        10.202.15.1           HTTP     291    HTTP/1.1 200 OK  (application/json)
