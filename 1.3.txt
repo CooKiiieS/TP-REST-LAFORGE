@@ -1,0 +1,8 @@
+A l'aide de la commande curl, montrez comment vous pouvez :
+- Récupérer la consommation électrique actuelle :
+	Pour se faire on a juste à passer la commande suivante :
+		curl http://192.168.33.1/meter/0 | json_pp -json_opt pretty,canonical |grep power
+
+- Allumer ou éteindre la prise :
+	Pour se faire on a juste à passer la commande suivante :
+		curl http://192.168.33.1/relay/0?turn=on | json_pp -json_opt pretty,canonical
