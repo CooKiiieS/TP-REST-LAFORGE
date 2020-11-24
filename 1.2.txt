@@ -1,0 +1,4 @@
+2) Avec mon téléphone je me connecte au réseau wifi de ma prise
+Ensuite dans une interface web je tape l’ip de ma prise (192.168.33.1) et
+j’arrive sur la page de configuration. Sur cette page je peux voir un bouton
+power pour allumer ou éteindre ma prise et à côté voir sa puissance consommé
